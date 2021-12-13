@@ -1,0 +1,25 @@
+#image: node:14.15.0-stretch
+stages:
+        - build
+        - test
+
+inatall_dependencies:
+        stage: build
+        #script: yarn install -y
+        #artifacts:
+        #        paths:
+        #                - node_modules
+        #cache:
+        #        key:
+        #                files:
+        #                        - yarn.lock
+        #        paths:
+        #                - node_modules                       
+        #tags: 
+        #       - test-react-app
+        
+run_test:
+        stage: test
+        #script: CI=true yarn test
+        #tags: 
+        #        - test-react-app
